@@ -10,6 +10,9 @@ from .forms import TodoForm
 def home(request):
     return render(request, "todo/home.html")
 
+def index(request):
+    return HttpResponse("welcome")
+
 
 def todo_list(request):
     todos = Todo.objects.all()
